@@ -16,7 +16,7 @@ const noticeItems = [
 
 const quickLinkCards = [
   {
-    title: "Admissions 2024",
+    title: "Admissions 2026",
     description: "Secure your seat for the upcoming academic session.",
     image: "https://res.cloudinary.com/dsxldaodx/image/upload/v1780999035/ChatGPT_Image_Jun_9_2026_03_26_04_PM_l5ni20.png",
     href: "/admissions",

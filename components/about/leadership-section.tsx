@@ -2,19 +2,19 @@ import Image from "next/image"
 
 const leaders = [
   {
-    name: "Yogesh Kasera",
+    name: "MR. Yogesh Kasera",
     role: "Director",
-    image: "https://ui-avatars.com/api/?name=Yogesh+Kasera&background=f0fdf4&color=16a34a&size=300",
+    image: "/images/director.png",
   },
   {
-    name: "Mr. Shubedar Verma",
+    name: "Mr. Subedar Verma",
     role: "Principal",
-    image: "https://ui-avatars.com/api/?name=Shubedar+Verma&background=f0fdf4&color=16a34a&size=300",
+    image: "/images/principal.png",
   },
   {
-    name: "Mr. Shyam Mohamab",
+    name: "MR. Shyam Mohammad",
     role: "Management",
-    image: "https://ui-avatars.com/api/?name=Shyam+Mohamab&background=f0fdf4&color=16a34a&size=300",
+    image: "/images/management.png",
   },
 ]
 
@@ -29,15 +29,19 @@ export function LeadershipSection() {
           Guided by visionaries dedicated to excellence in education and holistic student development.
         </p>
         
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10 lg:gap-12">
           {leaders.map((leader, index) => (
-            <div key={index} className="flex flex-col items-center group">
-              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden mb-4 shadow-xl border-4 border-background group-hover:border-primary/20 transition-all duration-500 group-hover:scale-105">
+            <div
+              key={index}
+              className="group mx-auto flex w-full max-w-[18rem] flex-col items-center"
+            >
+              <div className="relative mb-4 aspect-square w-40 overflow-hidden rounded-full border-4 border-background shadow-xl transition-all duration-500 group-hover:scale-105 group-hover:border-primary/20 sm:w-44 lg:w-52">
                 <Image 
                   src={leader.image}
                   alt={leader.name}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 208px"
+                  className="object-cover object-top"
                 />
               </div>
               <h3 className="font-serif text-lg md:text-xl font-bold mb-1 group-hover:text-primary transition-colors">
